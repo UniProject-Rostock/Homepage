@@ -1,73 +1,138 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <title>homepage</title>
-
-    <!-- Bootstrap CSS CDN -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
-            crossorigin="anonymous">
-            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <!-- Our Custom CSS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Responsive sidebar template with sliding effect and dropdown menu based on bootstrap 3">
+    <title>Sidebar template</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+ 
     <link rel="stylesheet" href="homepage.css">
-
-    <!-- Font Awesome JS -->
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN">
+    <script src="homepage.js"></script>
+    
+   
 </head>
 
 <body>
-    <div class="wrapper">
+   
         <!-- Sidebar  -->
-        <nav id="sidebar">
-            <div class="sidebar-header">
-                <h3>Menü</h3>
-            </div>
-
-            <ul class="list-unstyled components">
-                <div class="searchContainer">
-                    
-                    <input id="searchinput" type="search" name="search" placeholder="  Suche...">
-                    <i class="fa fa-search searchIcon"></i>
+        <div class="page-wrapper chiller-theme toggled">
+            <a id="show-sidebar" class="btn btn-sm btn-dark" href="#">
+              <i class="fas fa-bars"></i>
+            </a>
+            <nav id="sidebar" class="sidebar-wrapper">
+              <div class="sidebar-content">
+                <div class="sidebar-brand">
+                  <a href="#">pro sidebar</a>
+                  <div id="close-sidebar">
+                    <i class="fas fa-times"></i>
                   </div>
+                </div>
+                <div class="sidebar-header">
+                  <div class="user-pic">
+                    <img class="img-responsive img-rounded" src="https://raw.githubusercontent.com/azouaoui-med/pro-sidebar-template/gh-pages/src/img/user.jpg"
+                      alt="User picture">
+                  </div>
+                  <div class="user-info">
+                    <span class="user-name">Jhon
+                      <strong>Smith</strong>
+                    </span>
+                    <span class="user-role">Administrator</span>
+                    <span class="user-status">
+                      <i class="fa fa-circle"></i>
+                      <span>Online</span>
+                    </span>
+                  </div>
+                </div>
+                <!-- sidebar-header  -->
+                <div class="sidebar-search">
+                  <div>
+                    <div class="input-group">
+                      <input type="text" class="form-control search-menu" placeholder="Search...">
+                      <div class="input-group-append">
+                        <span class="input-group-text">
+                          <i class="fa fa-search" aria-hidden="true"></i>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- sidebar-search  -->
+                <div class="sidebar-menu">
+                  <ul>
+                   
+                    <li class="sidebar-item">
+                      <a href="#">
+                        <i class="fa fa-user"></i>
+                        <span>Profil</span>
+                      
+                      </a>
+                      
+                    </li>
+                    <li class="sidebar-dropdown">
+                      <a href="#">
+                        <i class="fa fa-users"></i>
+                        <span>Gruppen</span>
+                        <span class="badge badge-pill badge-danger">3</span>
+                      </a>
+                      <div class="sidebar-submenu">
+                        <ul>
+                          <li>
+                            <a href="#">Gruppe1
+          
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">Gruppe2</a>
+                          </li>
+                          <li>
+                            <a href="#">Gruppe3</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
                   
-                <li class="active">
-                   
-                    <a href="#groupsSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">  <i class="fa fa-users" > </i> Gruppen</a>
-                   
-                    <ul class="collapse list-unstyled" id="groupsSubmenu">
-                        <li>
-                            <a href="#">Gruppe 1</a>
-                           
-
-                        </li>
-                        <li>
-                            <a href="#">Gruppe 2</a>
-                        </li>
-                        <li>
-                            <a href="#">Gruppe 3</a>
-                        </li>
-                    </ul>
-                </li>
+                    <li class="header-menu">
+                      <span>Extra</span>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <i class="fa fa-book"></i>
+                        <span>Dokumentation</span>
+                        <span class="badge badge-pill badge-primary">Beta</span>
+                      </a>
+                    </li>
+                    
+                  </ul>
+                </div>
+                <!-- sidebar-menu  -->
+              </div>
+              <!-- sidebar-content  -->
+              <div class="sidebar-footer">
+                <a href="#">
+                  <i class="fa fa-bell"></i>
+                  <span class="badge badge-pill badge-warning notification">3</span>
+                </a>
                
-               
-                <li>
-                    <a href="#"><i class="fa fa-user" ></i>
-                        Profil</a>
-                </li>
-                <li>
-                    <a href="#"><i class="fa fa-cogs" aria-hidden="true"></i>
-                        Einstellungen</a>
-                </li>
-                
-            </ul>
-
-           
-        </nav>
+                <a href="#">
+                  <i class="fa fa-cog"></i>
+                  <span class="badge-sonar"></span>
+                </a>
+                <a href="#">
+                  <i class="fa fa-power-off"></i>
+                </a>
+              </div>
+            </nav>
 
         <!-- Page Content  -->
         <div id="content">
@@ -85,27 +150,7 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent-3">
                  
-                  <ul class="navbar-nav ml-auto nav-flex-icons">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle waves-effect waves-light" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fa fa-caret-down" aria-hidden="true"></i>
-
-                        </a>
-                        
-                        <div class="dropdown-menu dropdown-menu-right dropdown-default" aria-labelledby="navbarDropdownMenuLink">
-                          <a class="dropdown-item waves-effect waves-light" href="#">Action</a>
-                          <a class="dropdown-item waves-effect waves-light" href="#">Another action</a>
-                          <a class="dropdown-item waves-effect waves-light" href="#">Abmelden</a>
-                        </div>
-                      </li>
-                    <li class="nav-item">
-                      <a class="nav-link waves-effect waves-light">
-                        <i class="fa fa-bell"></i>
-                      </a>
-                    </li>
-                   
-                   
-                  </ul>
+                 
                 </div>
               </nav>
             
@@ -321,12 +366,42 @@
     <!-- Bootstrap JS -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
 
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $('#sidebarCollapse').on('click', function () {
-                $('#sidebar').toggleClass('active');
-            });
-        });
+    <script >
+        jQuery(function ($) {
+
+$(".sidebar-dropdown > a").click(function() {
+$(".sidebar-submenu").slideUp(200);
+if (
+$(this)
+  .parent()
+  .hasClass("active")
+) {
+$(".sidebar-dropdown").removeClass("active");
+$(this)
+  .parent()
+  .removeClass("active");
+} else {
+$(".sidebar-dropdown").removeClass("active");
+$(this)
+  .next(".sidebar-submenu")
+  .slideDown(200);
+$(this)
+  .parent()
+  .addClass("active");
+}
+});
+
+$("#close-sidebar").click(function() {
+$(".page-wrapper").removeClass("toggled");
+});
+$("#show-sidebar").click(function() {
+$(".page-wrapper").addClass("toggled");
+});
+
+
+
+
+});
     </script>
 </body>
 
