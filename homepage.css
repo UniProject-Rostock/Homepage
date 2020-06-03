@@ -58,6 +58,10 @@
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
   }
+  #sidebar{
+     
+      margin-top: 50px;
+  }
   
   /*----------------page-wrapper----------------*/
   
@@ -91,15 +95,13 @@
   /*----------------show sidebar button----------------*/
   #show-sidebar {
     position: fixed;
-    left: 0;
-    top: 10px;
-    border-radius: 0 4px 4px 0px;
-    width: 35px;
-    transition-delay: 0.3s;
+   color:white;
+   margin-right: 30px;
+   background-color: #00a1b2;
+   border: none;
+  
   }
-  .page-wrapper.toggled #show-sidebar {
-    left: -40px;
-  }
+  
   /*----------------sidebar-wrapper----------------*/
   
   .sidebar-wrapper {
@@ -310,6 +312,7 @@
     width: 100%;
     bottom: 0;
     display: flex;
+    margin-bottom: 20px;
   }
   
   .sidebar-footer > a {
@@ -478,5 +481,28 @@
   .chiller-theme .sidebar-footer>a:last-child {
       border-right: none;
   }
-  .card{
-      margin-top: 50px;  }
+  .navbar-brand{
+      margin-left: 30px;
+  }
+
+
+#myTap{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.card-header{
+    background-color: white;
+    height: 50px;;
+}
+.card{
+    margin-top: 20px;
+}
+.rounded-circle{
+    margin-bottom: 10px;
+}
+.ml-2{
+    margin-bottom: 15px;
+}
+.card-text{
+    font-size: 1rem;
+}
